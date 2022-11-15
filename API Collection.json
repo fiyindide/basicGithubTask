@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "527bee2e-3872-4b52-bc7e-22f067c7303b",
+		"name": "API Collection",
+		"description": "StartFragment\n\n\\[!\\[Run in Postman\\](https://run.pstmn.io/button.svg)\\](https://app.getpostman.com/run-collection/10279150-527bee2e-3872-4b52-bc7e-22f067c7303b?action=collection/fork&collection-url=entityId=10279150-527bee2e-3872-4b52-bc7e-22f067c7303b&entityType=collection&workspaceId=cf99b949-2e58-4c77-9b3f-dc2c011a8fff)\n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10279150"
+	},
+	"item": [
+		{
+			"name": "Get All Todo Entries",
+			"item": [
+				{
+					"name": "Get All Todo Entries",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/index.php/todo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php",
+								"todo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete an order",
+			"item": [
+				{
+					"name": "Delete an order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code name has string OK\", function () {\r",
+									"    pm.response.to.have.status(\"No Content\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "03c5abfe090876ab74a2a2ac4c079174a35fd88c9b88cd2164ff4b9d56c31d6c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/orders/:orderId",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"orders",
+								":orderId"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "bl8ZbxUCq59bH8DyYWvjo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get entry per ID",
+			"item": [
+				{
+					"name": "Get entry per ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php/todo/?todo_id=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php",
+								"todo",
+								""
+							],
+							"query": [
+								{
+									"key": "todo_id",
+									"value": "2"
+								}
+							]
+						},
+						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get All Entries",
+			"item": [
+				{
+					"name": "Get All Entries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/index.php/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"index.php",
+								""
+							]
+						},
+						"description": "https://demo.fusio-project.org/index.php/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Place a book order",
+			"item": [
+				{
+					"name": "Place a book order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const OrderId = pm.response.json();\r",
+									"\r",
+									"console.log(OrderId.orderId);\r",
+									"pm.globals.set(\"OrderId\", OrderId.orderId);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "03c5abfe090876ab74a2a2ac4c079174a35fd88c9b88cd2164ff4b9d56c31d6c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bookId\": 1,\n  \"customerName\": \"John\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/orders",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place a book order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const OrderId = pm.response.json();\r",
+									"\r",
+									"console.log(OrderId.orderId);\r",
+									"pm.globals.set(\"OrderId\", OrderId.orderId);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "03c5abfe090876ab74a2a2ac4c079174a35fd88c9b88cd2164ff4b9d56c31d6c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bookId\": 1,\n  \"customerName\": \"John\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/orders",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get all orders",
+			"item": [
+				{
+					"name": "Get all orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "03c5abfe090876ab74a2a2ac4c079174a35fd88c9b88cd2164ff4b9d56c31d6c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/orders",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get an order",
+			"item": [
+				{
+					"name": "Get an order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "03c5abfe090876ab74a2a2ac4c079174a35fd88c9b88cd2164ff4b9d56c31d6c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customerName\": \"John\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base_URL}}/orders/:orderId",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"orders",
+								":orderId"
+							],
+							"variable": [
+								{
+									"key": "orderId",
+									"value": "bl8ZbxUCq59bH8DyYWvjo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Books",
+			"item": [
+				{
+					"name": "Get Books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"const response = pm.response.json();\r",
+									"// print any kind of variables/message on the screen\r",
+									"console.log(response[2].name);\r",
+									"pm.test(\"Search for a book name called Viscount Who Loved Me\", function (){\r",
+									"    pm.expect(response[3].name).to.eql(\"Viscount Who Loved Me\")\r",
+									"});\r",
+									"\r",
+									"/*const Fiction = response.filter((book) => book.type === \"fiction\");\r",
+									"console.log(Fiction)\r",
+									"//Print out the id of a fiction book that is available called \"The Midnight Library\"*/\r",
+									"\r",
+									"const Fiction = response.filter((book) => book.type === \"fiction\" && book.available === true && book.name === \"Viscount Who Loved Me\")\r",
+									"\r",
+									"console.log(Fiction[0].id);\r",
+									"\r",
+									"pm.test(\"The id number of a fiction book that available with the name The Midnight Library is \" , function () {\r",
+									"    pm.expect(Fiction[0].name).eql(\"Viscount Who Loved Me\")\r",
+									"});\r",
+									"\r",
+									"pm.globals.set(\"bookId\", Fiction[0].id);\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/books?type=fiction",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "fiction"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
