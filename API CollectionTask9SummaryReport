@@ -1,0 +1,526 @@
+{
+	"id": "8a503171-e8d3-46fd-8651-282b943a20b5",
+	"name": "API Collection Copy",
+	"timestamp": "2022-11-24T10:48:28.139Z",
+	"collection_id": "10279150-835ddfa8-5a23-4ae8-8115-2df36683d734",
+	"folder_id": 0,
+	"environment_id": "10279150-b67caa5d-794a-497d-98ff-f9759fa23007",
+	"totalPass": 44,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "2ae0aaf6-f06f-4bbb-b91b-e7762dd6d650",
+			"name": "Register an API Client",
+			"url": "https://simple-books-api.glitch.me/api-clients/",
+			"time": 2652,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Status code name has string Created": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2652
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Status code name has string Created": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "6f31c046-4f40-4625-aae8-3da055fb2fc8",
+			"name": "Get All Todo Entries",
+			"url": "https://demo.fusio-project.org/index.php/todo",
+			"time": 1882,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1882
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8c8b5a1f-4597-4813-b631-8ef151c8e860",
+			"name": "Get entry per ID",
+			"url": "https://demo.fusio-project.org/index.php/todo/?todo_id=2",
+			"time": 211,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				211
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "39471239-c9b9-4ae0-8f61-43a072348724",
+			"name": "Get All Entries",
+			"url": "https://demo.fusio-project.org/index.php/",
+			"time": 357,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code should have an OK string": true,
+				"Response time should be less than 5000ms": true,
+				"Body response should contain apiVersion string": true,
+				"Content-Type should present in the response header": true,
+				"Date should present in the response header": true,
+				"Title should be Fusio": true,
+				"The fourth item in categories should be backend": true,
+				"paymentCurrency should be present in the body response": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code should have an OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time should be less than 5000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should contain apiVersion string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type should present in the response header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Date should present in the response header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title should be Fusio": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The fourth item in categories should be backend": {
+					"pass": 1,
+					"fail": 0
+				},
+				"paymentCurrency should be present in the body response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				357
+			],
+			"allTests": [
+				{
+					"Status code should be 200": true,
+					"Status code should have an OK string": true,
+					"Response time should be less than 5000ms": true,
+					"Body response should contain apiVersion string": true,
+					"Content-Type should present in the response header": true,
+					"Date should present in the response header": true,
+					"Title should be Fusio": true,
+					"The fourth item in categories should be backend": true,
+					"paymentCurrency should be present in the body response": true
+				}
+			]
+		},
+		{
+			"id": "1e2967df-42fb-4a51-872d-3ceadbed74da",
+			"name": "Get All Books",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 377,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code should have OK string": true,
+				"Response time should be less than 5000ms": true,
+				"The id number of a fiction book that available with the name The Midnight Library is ": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code should have OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time should be less than 5000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The id number of a fiction book that available with the name The Midnight Library is ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				377
+			],
+			"allTests": [
+				{
+					"Status code should be 200": true,
+					"Status code should have OK string": true,
+					"Response time should be less than 5000ms": true,
+					"The id number of a fiction book that available with the name The Midnight Library is ": true
+				}
+			]
+		},
+		{
+			"id": "d563aab7-4e43-430f-9f33-49b2c9b11a5f",
+			"name": "Get Book : Valid bookId",
+			"url": "https://simple-books-api.glitch.me/books?orderId=null",
+			"time": 262,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Status code should have OK string": true,
+				"Response time should be less than 5000ms": true,
+				"Search for a book name called Viscount Who Loved Me": true,
+				"Search for a book name called The midnight library": true,
+				"Search for a book name called The Russian": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code should have OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time should be less than 5000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search for a book name called Viscount Who Loved Me": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search for a book name called The midnight library": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Search for a book name called The Russian": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				262
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Status code should have OK string": true,
+					"Response time should be less than 5000ms": true,
+					"Search for a book name called Viscount Who Loved Me": true,
+					"Search for a book name called The midnight library": true,
+					"Search for a book name called The Russian": true
+				}
+			]
+		},
+		{
+			"id": "023b4daf-5fa2-4e75-aa8b-dfde9bd623ad",
+			"name": "Place a book order",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 271,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code should be 201": true,
+				"Status code name has string": true,
+				"Order should be successfully created": true,
+				"Body response should contain an orderId": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Order should be successfully created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should contain an orderId": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				271
+			],
+			"allTests": [
+				{
+					"Status code should be 201": true,
+					"Status code name has string": true,
+					"Order should be successfully created": true,
+					"Body response should contain an orderId": true
+				}
+			]
+		},
+		{
+			"id": "2e7eafa0-9613-4cdb-b5bb-c6955abd6bd4",
+			"name": "Get all orders",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 249,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code should have OK string": true,
+				"Body response should have id string": true,
+				"Body response should have bookId string": true,
+				"Body response should have customerName string": true,
+				"Body response should have createdBy": true,
+				"Body response should have quantity string": true,
+				"Body response should have time stamp string": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code should have OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have id string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have bookId string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have customerName string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have createdBy": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have quantity string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have time stamp string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				249
+			],
+			"allTests": [
+				{
+					"Status code should be 200": true,
+					"Status code should have OK string": true,
+					"Body response should have id string": true,
+					"Body response should have bookId string": true,
+					"Body response should have customerName string": true,
+					"Body response should have createdBy": true,
+					"Body response should have quantity string": true,
+					"Body response should have time stamp string": true
+				}
+			]
+		},
+		{
+			"id": "1359e492-a9a9-46ab-be05-55a01f7107cc",
+			"name": "Get an order",
+			"url": "https://simple-books-api.glitch.me/orders/tJJ7aXz2LMSAxZO4RKcqF",
+			"time": 253,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code should be 200": true,
+				"Status code should have OK string": true,
+				"Body response should have id string": true,
+				"Body response should have bookId string": true,
+				"Body response should have customerName string": true,
+				"Body response should have createdBy": true,
+				"Body response should have quantity string": true,
+				"Body response should have time stamp string": true
+			},
+			"testPassFailCounts": {
+				"Status code should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code should have OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have id string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have bookId string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have customerName string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have createdBy": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have quantity string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body response should have time stamp string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				253
+			],
+			"allTests": [
+				{
+					"Status code should be 200": true,
+					"Status code should have OK string": true,
+					"Body response should have id string": true,
+					"Body response should have bookId string": true,
+					"Body response should have customerName string": true,
+					"Body response should have createdBy": true,
+					"Body response should have quantity string": true,
+					"Body response should have time stamp string": true
+				}
+			]
+		},
+		{
+			"id": "8ffd7f9d-d0f5-4552-8632-358329f3a62e",
+			"name": "Delete an order",
+			"url": "https://simple-books-api.glitch.me/orders/tJJ7aXz2LMSAxZO4RKcqF",
+			"time": 1722,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true,
+				"Status code name has string OK": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1722
+			],
+			"allTests": [
+				{
+					"Status code is 204": true,
+					"Status code name has string OK": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 8236,
+	"collection": {
+		"requests": [
+			{
+				"id": "2ae0aaf6-f06f-4bbb-b91b-e7762dd6d650",
+				"method": "POST"
+			},
+			{
+				"id": "6f31c046-4f40-4625-aae8-3da055fb2fc8",
+				"method": "GET"
+			},
+			{
+				"id": "8c8b5a1f-4597-4813-b631-8ef151c8e860",
+				"method": "GET"
+			},
+			{
+				"id": "39471239-c9b9-4ae0-8f61-43a072348724",
+				"method": "GET"
+			},
+			{
+				"id": "1e2967df-42fb-4a51-872d-3ceadbed74da",
+				"method": "GET"
+			},
+			{
+				"id": "d563aab7-4e43-430f-9f33-49b2c9b11a5f",
+				"method": "GET"
+			},
+			{
+				"id": "023b4daf-5fa2-4e75-aa8b-dfde9bd623ad",
+				"method": "POST"
+			},
+			{
+				"id": "2e7eafa0-9613-4cdb-b5bb-c6955abd6bd4",
+				"method": "GET"
+			},
+			{
+				"id": "1359e492-a9a9-46ab-be05-55a01f7107cc",
+				"method": "GET"
+			},
+			{
+				"id": "8ffd7f9d-d0f5-4552-8632-358329f3a62e",
+				"method": "DELETE"
+			}
+		]
+	}
+}
